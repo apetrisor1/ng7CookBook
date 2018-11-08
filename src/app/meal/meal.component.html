@@ -1,0 +1,79 @@
+<section>
+	<ul *ngIf="mealToShow">
+		<li *ngFor="let meal of mealToShow.meals">
+		  	<p> {{ meal.strMeal }} </p>
+		  	<p> {{ meal.strCategory }} </p>
+		  	<p> {{ meal.strArea }} </p>
+		  	<img [src]="meal.strMealThumb">
+	  		<p class="instructions">{{meal.strInstructions}}</p>
+
+		</li>
+
+		<li *ngFor="let meal of mealToShow.meals">
+
+			<div class="ingredients-box" *ngIf="mealToShow">
+				
+				<p *ngIf="meal.strIngredient1">
+					{{meal.strIngredient1}} &nbsp;&nbsp; <span>{{meal.strMeasure1}}</span>
+				</p>
+				<p *ngIf="meal.strIngredient2">
+					{{meal.strIngredient2}} &nbsp;&nbsp; <span>{{meal.strMeasure2}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient3">
+					{{meal.strIngredient3}} &nbsp;&nbsp; <span>{{meal.strMeasure3}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient4">
+					{{meal.strIngredient4}} &nbsp;&nbsp; <span>{{meal.strMeasure4}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient5">
+					{{meal.strIngredient5}} &nbsp;&nbsp; <span>{{meal.strMeasure5}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient6">
+					{{meal.strIngredient6}} &nbsp;&nbsp; <span>{{meal.strMeasure6}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient7">
+					{{meal.strIngredient7}} &nbsp;&nbsp; <span>{{meal.strMeasure7}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient8">
+					{{meal.strIngredient8}} &nbsp;&nbsp; <span>{{meal.strMeasure8}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient9">
+					{{meal.strIngredient9}} &nbsp;&nbsp; <span>{{meal.strMeasure9}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient10">
+					{{meal.strIngredient10}} &nbsp;&nbsp; <span>{{meal.strMeasure10}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient11">
+					{{meal.strIngredient11}} &nbsp;&nbsp; <span>{{meal.strMeasure11}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient12">
+					{{meal.strIngredient12}} &nbsp;&nbsp; <span>{{meal.strMeasure12}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient13">
+					{{meal.strIngredient13}} &nbsp;&nbsp; <span>{{meal.strMeasure13}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient14">
+					{{meal.strIngredient14}} &nbsp;&nbsp; <span>{{meal.strMeasure14}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient15">
+					{{meal.strIngredient15}} &nbsp;&nbsp; <span>{{meal.strMeasure15}}</span>
+				</p>
+				<p *ngIf="meal.strIngredient16">
+					{{meal.strIngredient16}} &nbsp;&nbsp; <span>{{meal.strMeasure16}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient17">
+					{{meal.strIngredient17}} &nbsp;&nbsp; <span>{{meal.strMeasure17}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient18">
+					{{meal.strIngredient18}} &nbsp;&nbsp; <span>{{meal.strMeasure18}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient19">
+					{{meal.strIngredient19}} &nbsp;&nbsp; <span>{{meal.strMeasure19}}</span> 
+				</p>
+				<p *ngIf="meal.strIngredient20">
+					{{meal.strIngredient20}} &nbsp;&nbsp; <span>{{meal.strMeasure20}}</span> 
+				</p>
+			</div>
+		</li>
+	</ul>
+</section>

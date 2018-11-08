@@ -1,0 +1,203 @@
+/* Style for main container */
+.full-width {
+  width: 100%;
+  padding: 0;
+  margin-top:50px;
+}
+
+h1 {
+  margin-bottom: 2em;
+  cursor: pointer;
+  margin-left: 10%;
+}
+
+h2 {
+  font-size: 35px;
+  margin-bottom: 13px;
+  margin-left: 10%;
+}
+
+h2:nth-of-type(2){
+  position: relative;
+  left: -0.5%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+li {
+  flex-basis: 35%;
+}
+ul li {
+  background: #eee;
+  padding: 2em;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 100px;
+}
+ul li p {
+  font-weight: bold;
+  margin-left: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+ul li .category {
+  cursor: default;
+}
+
+ul li img {
+  border-radius: 50%;
+  width: 50%;
+}
+
+img {
+  margin-left: 45%;
+  position: relative;
+}
+
+p {
+  font-size: 1.2em;
+}
+#left, #right {
+  font-size: 60px;
+  position: relative;
+  top: 5em;
+}
+#left{
+}
+#right{
+  float:right;
+  margin-right: 15%;
+
+}
+
+
+/* Styles related to the CATEGORY and REGION of meal*/
+.small, .small-move {
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  font-size: 1em;
+}
+ul li .small, ul li .small-move {
+  width: 50%;
+}
+.small:hover, .small-move:hover {
+  transition: 1s;
+  color: maroon;
+}
+
+
+
+/* Styles related to cooking instructions */
+
+ul li .instructions {
+  margin-top: 1.5em;
+  width: 24em;
+  text-align: justify;
+  font-size: 1em;
+  cursor: default;
+  white-space:pre-wrap; 
+  /* use white-space:pre-wrap to preserve line breaks in strings*/
+}
+
+
+/* Styles related to the ingredient images */
+
+.ingredients-box {
+  border: 2px solid black;
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.ingredients-box p {
+  flex-basis: 80%;
+  margin-top: 30px;
+  font-size: 1.2em;
+}
+
+
+/* Styling related to dropdown menus */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin-right: 3%;
+    display: inline-block;
+    margin-left: 10%;
+    margin-bottom: 13px;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+
+
+
+@media (max-width: 415px) {
+  
+  ul li {
+    padding: 4em;
+  }
+  .small, .small-move {
+    top: 250px;
+  }
+  ul li img {
+    width: 200px;
+  }
+
+  img {
+    margin-left: 0%;
+    top: -35px;
+    left: 5%;
+  }
+  ul li p:first-of-type {
+    position: relative;
+    top: -50px;
+    left: -1%;
+  }
+  p {
+    position: relative;
+    left: 22%;
+  }
+  .ingredients-box {
+    width: 100%;
+  }
+}

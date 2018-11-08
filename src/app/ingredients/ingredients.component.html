@@ -1,0 +1,61 @@
+<section>
+  <h1>Ingredients</h1>
+
+  <div class='flex-pages'>
+    <button (click)="show1()">1</button>
+    <button (click)="show2()">2</button>
+    <button (click)="show3()">3</button>
+    <button (click)="show4()">4</button>
+    <button (click)="show5()">5</button>
+    <button (click)="show6()">6</button>
+  </div>
+
+  <div class='flex-ingredients'>
+
+  <ul *ngIf="ingredients && page1">
+    <li *ngFor="let ingredient of ingredients.meals.slice(0,100)">
+      <p> {{ ingredient.strIngredient }}</p>
+    </li>
+  </ul>
+
+  <ul *ngIf="ingredients && page2">
+    <li *ngFor="let ingredient of ingredients.meals.slice(100,200)">
+      <p> {{ ingredient.strIngredient }}</p>
+    </li>
+  </ul>
+
+  <ul *ngIf="ingredients && page3">
+    <li *ngFor="let ingredient of ingredients.meals.slice(200,300)">
+      <p> {{ ingredient.strIngredient }}</p>
+    </li>
+  </ul>
+
+  <ul *ngIf="ingredients && page4">
+    <li *ngFor="let ingredient of ingredients.meals.slice(300,400)">
+      <p> {{ ingredient.strIngredient }}</p>
+    </li>
+  </ul>
+
+  <ul *ngIf="ingredients && page5">
+    <li *ngFor="let ingredient of ingredients.meals.slice(400,500)">
+      <p> {{ ingredient.strIngredient }}</p>
+    </li>
+  </ul>
+
+  <ul *ngIf="ingredients && page6">
+    <li *ngFor="let ingredient of ingredients.meals.slice(500,ingredients.meals.length)">
+      <p> {{ ingredient.strIngredient }}</p>
+    </li>
+  </ul>
+
+  </div>
+
+  <div *ngIf="!page6" class='flex-pages'>
+    <button (click)="show1()">1</button>
+    <button (click)="show2()">2</button>
+    <button (click)="show3()">3</button>
+    <button (click)="show4()">4</button>
+    <button (click)="show5()">5</button>
+    <button (click)="show6()">6</button>
+  </div>  
+</section> 

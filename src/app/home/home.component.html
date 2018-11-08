@@ -1,0 +1,17 @@
+<section class="full-width">
+	<h1 *ngIf="latestMeals">Latest Meals</h1>
+
+
+	<!-- LATEST MEALS, displayed on page load -->
+	<ul *ngIf="latestMeals">
+	  <li *ngFor="let meal of latestMeals.meals">
+	  	<p [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>
+	  	<img [src]="meal.strMealThumb">
+	  	<p class="category"> {{ meal.strCategory }} </p>
+	  	<p class="category"> {{ meal.strArea }} </p>
+	  </li>
+	</ul>
+
+
+	<app-footer *ngIf="latestMeals"></app-footer>
+</section>

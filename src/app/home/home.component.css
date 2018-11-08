@@ -1,0 +1,128 @@
+/* Style for main container */
+.full-width {
+  width: 100%;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 2em;
+  cursor: pointer;
+  margin-left: 10%;
+}
+
+h2 {
+  margin-left: 10%;
+  margin-bottom: 50px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+li {
+  flex-basis: 35%;
+}
+ul li {
+  background: #eee;
+  padding: 2em;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 100px;
+}
+ul li p {
+  font-weight: bold;
+  margin-left: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+ul li img {
+  border-radius: 50%;
+  width: 50%;
+}
+
+img {
+  margin-left: 45%;
+  position: relative;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+
+ul li .category {
+  cursor: default;
+}
+
+
+/* Styles related to cooking instructions */
+
+ul li .instructions {
+  margin-top: 1.5em;
+  width: 24em;
+  text-align: justify;
+  font-size: 1em;
+  cursor: default;
+  white-space:pre-wrap; 
+  /* use white-space:pre-wrap to preserve line breaks in strings*/
+}
+
+
+/* Styles related to the ingredient images */
+
+.ingredients-box {
+  border: 2px solid black;
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.ingredients-box p {
+  flex-basis: 80%;
+  margin-top: 30px;
+  font-size: 1.2em;
+}
+
+
+
+
+
+@media (max-width: 415px) {
+  
+  ul li {
+    padding: 3em;
+    margin-left: 15%;
+    margin-right:15%;
+  }
+  .small, .small-move {
+    top: 250px;
+  }
+  ul li img {
+    width: 200px;
+  }
+
+  img {
+    margin-left: 0%;
+    top: -35px;
+    left: 5%;
+  }
+  ul li p:first-of-type {
+    position: relative;
+    top: -50px;
+    left: -1%;
+  }
+  p {
+    position: relative;
+    left: 22%;
+  }
+  .ingredients-box {
+    width: 100%;
+  }
+}

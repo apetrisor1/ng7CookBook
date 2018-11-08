@@ -1,0 +1,58 @@
+<section class="full-width">
+
+	<h2 *ngIf="allMeals"> Search by cuisine </h2>
+
+	<div *ngIf="allMeals" class="dropdown">
+  		<button class="dropbtn" (click)="toggleAreas()"> Select </button>
+  		<div *ngIf="_showAreas" class="dropdown-content">
+  		<span *ngFor="let area of allAreas.meals">
+		    <a [routerLink]="['/meal-list-area', area.strArea]" (click)= "prepareArea(area.strArea)">{{area.strArea}}</a>
+		</span>
+  		</div>
+	</div>
+
+	<h2 *ngIf="allMeals"> Search by category </h2>
+
+	<div *ngIf="allMeals" class="dropdown">
+  		<button class="dropbtn" (click)="toggleCategories()"> Select </button>
+  		<div *ngIf="_showCategories" class="dropdown-content">
+		<span *ngFor="let category of allCategories.meals">
+		    <a [routerLink]="['/meal-list-category', category.strCategory]" (click)="prepareCategory(category.strCategory)">{{category.strCategory}}</a>
+		</span>
+  		</div>
+	</div>
+
+
+	<span (click)="getAnotherRandom()" id="left"><</span>
+	<span (click)="getAnotherRandom()" id="right">></span>
+
+	<!-- randomMeals, displayed on meal-list page -->
+	<ul (click)="hideDropdowns()" *ngIf="randomMeals">
+	  <li *ngFor="let meal of randomMeals.meals">
+	  	<p [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>
+	  	<img [src]="meal.strMealThumb">
+	  	<p class="category"> {{ meal.strCategory }} </p>
+	  	<p class="category"> {{ meal.strArea }} </p>
+	  </li>
+	</ul>
+
+
+	
+	<!-- ALL MEALS, displayed on meal-list page -->
+	<ul (click)="hideDropdowns()" *ngIf="allMeals">
+	  <li *ngFor="let meal of allMeals.meals">
+	  	<p [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>
+	  	<img [src]="meal.strMealThumb">
+	  	<p class="category"> {{ meal.strCategory }} </p>
+	  	<p class="category"> {{ meal.strArea }} </p>
+	  </li>
+	</ul>
+
+	
+	
+
+
+
+	<router-outlet></router-outlet>
+	<app-footer *ngIf="allMeals"></app-footer>
+</section>

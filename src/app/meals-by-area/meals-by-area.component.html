@@ -1,0 +1,15 @@
+<section class="full-width">
+
+<!-- ALL MEALS, displayed on meal-list page -->
+	<ul *ngIf="allMeals">
+	  <li *ngFor="let meal of allMeals.meals">
+	  	<p [routerLink]="['/meal-detail', meal.idMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>
+	  	<img [src]="meal.strMealThumb">
+	  	<p class="category"> {{ meal.strCategory }} </p>
+	  	<p class="category"> {{ meal.strArea }} </p>
+	  </li>
+	</ul>
+
+	<router-outlet></router-outlet>
+	<app-footer *ngIf="allMeals"></app-footer>
+</section>
