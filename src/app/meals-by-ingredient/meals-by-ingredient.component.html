@@ -1,8 +1,9 @@
 <section class="full-width">
 
-<h1 *ngIf="strArea">{{strArea}}</h1>
 
-<!-- ALL MEALS, displayed on meal-list page -->
+<h1 *ngIf="strIngredient">Meals with {{strIngredient}}</h1>
+
+<!-- MEALS BY INGREDIENT -->
 	<ul *ngIf="allMeals">
 	  <li *ngFor="let meal of allMeals.meals">
 	  	<p [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>

@@ -1,9 +1,11 @@
 <section class="full-width">
 
-<!-- ALL MEALS, displayed on meal-list page -->
+<h1 *ngIf="strCategory">{{strCategory}}</h1>
+
+<!-- Meals by CATEGORY -->
 	<ul *ngIf="allMeals">
 	  <li *ngFor="let meal of allMeals.meals">
-	  	<p [routerLink]="['/meal-detail', meal.idMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>
+	  	<p [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>
 	  	<img [src]="meal.strMealThumb">
 	  	<p class="category"> {{ meal.strCategory }} </p>
 	  	<p class="category"> {{ meal.strArea }} </p>

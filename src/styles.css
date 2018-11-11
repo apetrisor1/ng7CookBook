@@ -29,6 +29,10 @@ section {
   padding: 2em;
 }
 
+img {
+  cursor: pointer;
+}
+
 
 @media (max-width: 415px) {
 

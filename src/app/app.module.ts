@@ -15,6 +15,8 @@ import { MealComponent } from './meal/meal.component';
 import { MealListComponent } from './meal-list/meal-list.component';
 import { MealsByAreaComponent } from './meals-by-area/meals-by-area.component';
 import { MealsByCategoryComponent } from './meals-by-category/meals-by-category.component';
+import { MealsByIngredientComponent } from './meals-by-ingredient/meals-by-ingredient.component';
+import { MealsByQueryComponent } from './meals-by-query/meals-by-query.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MealsByCategoryComponent } from './meals-by-category/meals-by-category.
     MealComponent,
     MealListComponent,
     MealsByAreaComponent,
-    MealsByCategoryComponent
+    MealsByCategoryComponent,
+    MealsByIngredientComponent,
+    MealsByQueryComponent
   ],
   imports: [
     BrowserModule,

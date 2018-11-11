@@ -11,6 +11,10 @@ export class HomeComponent implements OnInit {
   //container for all meals
   latestMeals: Object;
 
+  //container for query
+  query: string = '';
+    
+
 
   // To use methods defined in data.service.ts, we instantiate DataService class in 'data'
   constructor(private data: DataService) { }
@@ -28,6 +32,12 @@ export class HomeComponent implements OnInit {
   // This saves our selected meal's ID in data.service.ts, for later use when displaying
   prepareForShow(id) {
     this.data.mealId = id;
+  }
+
+  testQuery() {
+    this.data.strQuery = 'kapsalon';
+    this.query = this.data.strQuery;
+    console.log(this.data.strQuery);
   }
 
 

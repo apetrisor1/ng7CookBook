@@ -21,15 +21,10 @@ export class MealListComponent implements OnInit {
   //container for all categories
   allCategories: Object;
 
-
-
   _showAreas: Boolean = false;
   _showCategories: Boolean = false;
 
-
   constructor(private data: DataService) { }
-
-
 
   ngOnInit() {
     this.data.getRandomMeal().subscribe(meals => {

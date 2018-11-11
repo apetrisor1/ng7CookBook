@@ -9,10 +9,12 @@ export class DataService {
   showLatestMeals: Boolean = true;
   showAllMeals: Boolean = false;
 
-  // keep track of selected meal, area or category
+  // keep track of selected meal, area, category or query
   mealId: Number = 0;
   strArea: string = '';
   strCategory: string = '';
+  strIngredient: string = '';
+  strQuery: string = '';
 
   constructor(private http: HttpClient) { }
 
@@ -27,6 +29,10 @@ export class DataService {
 
   getMealsByArea(area){
   	return this.http.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`);
+  }
+
+  getMealsByIngredient(ingredient){
+    return this.http.get(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`);
   }
 
   getMealDetails(mealId){

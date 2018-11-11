@@ -28,8 +28,8 @@
 
 	<!-- randomMeals, displayed on meal-list page -->
 	<ul (click)="hideDropdowns()" *ngIf="randomMeals">
-	  <li *ngFor="let meal of randomMeals.meals">
-	  	<p [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>
+	  <li [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)" *ngFor="let meal of randomMeals.meals">
+	  	<p> {{ meal.strMeal }} </p>
 	  	<img [src]="meal.strMealThumb">
 	  	<p class="category"> {{ meal.strCategory }} </p>
 	  	<p class="category"> {{ meal.strArea }} </p>
@@ -40,8 +40,8 @@
 	
 	<!-- ALL MEALS, displayed on meal-list page -->
 	<ul (click)="hideDropdowns()" *ngIf="allMeals">
-	  <li *ngFor="let meal of allMeals.meals">
-	  	<p [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)"> {{ meal.strMeal }} </p>
+	  <li [routerLink]="['/meal-detail', meal.strMeal]" (click)="prepareForShow(meal.idMeal)" *ngFor="let meal of allMeals.meals">
+	  	<p> {{ meal.strMeal }} </p>
 	  	<img [src]="meal.strMealThumb">
 	  	<p class="category"> {{ meal.strCategory }} </p>
 	  	<p class="category"> {{ meal.strArea }} </p>

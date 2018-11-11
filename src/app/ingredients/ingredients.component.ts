@@ -8,6 +8,10 @@ import { DataService } from '../data.service';
 })
 export class IngredientsComponent implements OnInit {
 
+  //ingredient selector
+  strIngredient: string = '';
+  
+
   ingredients: Object;
   page1: boolean = true;
   page2: boolean = false;
@@ -25,6 +29,16 @@ export class IngredientsComponent implements OnInit {
       }
     );
   }
+
+  //Prepare meals with our main ingredient
+  prepareIngredient(strIngredient) {
+    this.data.strIngredient = strIngredient;
+    this.strIngredient = strIngredient;
+    console.log(strIngredient);
+  }
+
+
+  // PAGINATION
   show1() {
     this.page1 = true;
     this.page2 = false;

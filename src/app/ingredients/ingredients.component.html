@@ -1,5 +1,5 @@
 <section>
-  <h1>Ingredients</h1>
+  <h1>Select your main ingredient to show meals</h1>
 
   <div class='flex-pages'>
     <button (click)="show1()">1</button>
@@ -10,40 +10,41 @@
     <button (click)="show6()">6</button>
   </div>
 
+
   <div class='flex-ingredients'>
 
   <ul *ngIf="ingredients && page1">
-    <li *ngFor="let ingredient of ingredients.meals.slice(0,100)">
+    <li [routerLink]="['/meal-list-ingredient', ingredient.strIngredient]" (click)="prepareIngredient(ingredient.strIngredient)" *ngFor="let ingredient of ingredients.meals.slice(0,100)">
       <p> {{ ingredient.strIngredient }}</p>
     </li>
   </ul>
 
   <ul *ngIf="ingredients && page2">
-    <li *ngFor="let ingredient of ingredients.meals.slice(100,200)">
+    <li [routerLink]="['/meal-list-ingredient', ingredient.strIngredient]" (click)="prepareIngredient(ingredient.strIngredient)" *ngFor="let ingredient of ingredients.meals.slice(100,200)">
       <p> {{ ingredient.strIngredient }}</p>
     </li>
   </ul>
 
   <ul *ngIf="ingredients && page3">
-    <li *ngFor="let ingredient of ingredients.meals.slice(200,300)">
+    <li [routerLink]="['/meal-list-ingredient', ingredient.strIngredient]" (click)="prepareIngredient(ingredient.strIngredient)" *ngFor="let ingredient of ingredients.meals.slice(200,300)">
       <p> {{ ingredient.strIngredient }}</p>
     </li>
   </ul>
 
   <ul *ngIf="ingredients && page4">
-    <li *ngFor="let ingredient of ingredients.meals.slice(300,400)">
+    <li [routerLink]="['/meal-list-ingredient', ingredient.strIngredient]" (click)="prepareIngredient(ingredient.strIngredient)" *ngFor="let ingredient of ingredients.meals.slice(300,400)">
       <p> {{ ingredient.strIngredient }}</p>
     </li>
   </ul>
 
   <ul *ngIf="ingredients && page5">
-    <li *ngFor="let ingredient of ingredients.meals.slice(400,500)">
+    <li [routerLink]="['/meal-list-ingredient', ingredient.strIngredient]" (click)="prepareIngredient(ingredient.strIngredient)" *ngFor="let ingredient of ingredients.meals.slice(400,500)">
       <p> {{ ingredient.strIngredient }}</p>
     </li>
   </ul>
 
   <ul *ngIf="ingredients && page6">
-    <li *ngFor="let ingredient of ingredients.meals.slice(500,ingredients.meals.length)">
+    <li [routerLink]="['/meal-list-ingredient', ingredient.strIngredient]" (click)="prepareIngredient(ingredient.strIngredient)" *ngFor="let ingredient of ingredients.meals.slice(500,ingredients.meals.length)">
       <p> {{ ingredient.strIngredient }}</p>
     </li>
   </ul>

@@ -9,6 +9,7 @@ ul li {
   padding: 1em;
   border-radius: 4px;
   margin: 10px;
+  cursor: pointer;
 }
 ul li p {
   font-weight: bold;
